@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:ng="http://angularjs.org" data-ng-app="test">
+
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Gallery</title>
+    <!-- CSS Link-->
+    <link rel="icon" type="image/png" sizes="16x16" href="asset/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="asset/css/font-awesome.min.css"> 
+	<link rel="stylesheet" type="text/css" href="asset/fonts/stylesheet.css">   
+	<link rel="stylesheet" type="text/css" href="asset/css/admin_style.css">   
+    <link rel="stylesheet" type="text/css" href="asset/css/media.css">
+    <link rel="stylesheet" href="lib/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet" href="asset/css/angular-material-sidemenu.css">
+    <link rel="stylesheet" href="asset/css/sweetalert.css"/>
+    <!-- JS File Link-->
+    <script src="asset/js/jquery.min.js"></script>
+
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="asset/js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="asset/js/angular-cookies.js"></script>
+    <script type="text/javascript" src="asset/js/angular-material-sidemenu.js"></script>
+    <script type="text/javascript" src="asset/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="asset/js/sweetalert.min.js"></script> 
+    <script type="text/javascript" src="asset/js/angular-storage.min.js"></script>
+    <script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="lib/angular-aria/angular-aria.min.js"></script>
+    <script type="text/javascript" src="lib/angular-material/angular-material.min.js"></script>
+    <script src="lib/angular-messages/angular-messages.min.js"></script>
+    <script src="config/config.js"></script>
+    <script type="text/javascript" src="application.js"></script>
+    <script type="text/javascript" src="controller/loginController.js"></script>
+    <script type="text/javascript" src="controller/mainController.js"></script>
+    <script type="text/javascript" src="controller/stickerController.js"></script>
+
+</head>
+
+<body data-ng-controller="mainController" data-ng-init="init()">
+    <div ui-view="header">
+    </div>
+    <div ui-view="sidebar" data-ng-if="userDetails" id="main-sidebar-sect">
+    </div>
+    <div ui-view="body">
+    </div>
+    <!-- Footer -->
+    <div ui-view="footer">
+    </div>
+</body>
+
+</html>

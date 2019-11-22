@@ -1,0 +1,36 @@
+<header class="header_section_here" ng-init="init()" ng-controller="mainController">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="">
+            <div class="header_info">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="header_logo col-lg-3 col-md-3">
+                    <a href="dashboard"><img src="asset/images/demo-logo.png" width="200" height="35" alt="logo"/></a>
+                </div>
+                <div class="collapse navbar-collapse col-lg-9 col-md-9" id="bs-example-navbar-collapse-1">
+                    <div class="profile_veiw_info">
+                        <div class="dropdown drop_profile">
+                            <!-- <a ui-sref="notification" >
+                                <div class="profile_img">
+                                    <span class="prof_img" style="background-image: url(asset/images/notification.jpeg);" ><p ng-if="notification_Count > 0">{{notification_Count}}</p></span>
+                                   
+                                </div>
+                            </a> -->
+                            <a class="loguot" ng-click="logout()">
+                                <div class="profile_name">
+                                    <span class="caret_here"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                                </div>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

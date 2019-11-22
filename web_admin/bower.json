@@ -1,0 +1,17 @@
+{
+  "name": "express-hybrid",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.4.8",
+    "base": "~2.7.2",
+    "bootstrap": "~3.3.6",
+    "angular-cookies": "^1.7.2",
+    "sweetalert": "^2.1.0",
+    "angular-messages": "^1.7.8",
+    "angular-material": "^1.1.14"
+  },
+  "resolutions": {
+    "angular": "^1.7.2",
+    "angular-material": "^1.0.9"
+  }
+}

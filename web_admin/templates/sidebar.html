@@ -1,0 +1,37 @@
+<div class="lt_sidebar main-sidebar" ng-controller="mainController" ng-init="init()">
+    <div class="FT_lt_box sidebar">
+        <!--<div class="user-panel">
+            <div class="image pull-left">
+                <img src="../asset/images/default_profile.png" class="img-circle" alt="User Image">
+            </div>
+            <div class="info">
+                <h4>Welcome</h4>
+                <p>{{userDetails.firstName| uppercase}}</p>
+            </div>
+        </div>-->
+        <div class="gw-nav sidebar-menu">
+            <div class="main-container" layout="row" flex>
+                <md-sidenav class="main-sidenav md-sidenav-left" md-component-id="navigation-drawer" md-is-locked-open="true" layout="column">
+                    <md-content md-scroll-y flex layout="column">
+                        <md-sidemenu locked="true">
+                            <md-sidemenu-group>
+
+                                <md-sidemenu-button ui-sref-active-eq="leftmenuactive" ui-sref="dashboard">
+                                    <md-icon md-svg-src="asset/images/lt_dashboard.svg" ui-sref-active="active"></md-icon>Gallery
+                                </md-sidemenu-button>
+
+                                 <md-sidemenu-button ui-sref-active="leftmenuactive" ui-sref="category">
+                                    <md-icon md-svg-src="asset/images/lt_account_setting.svg"></md-icon>Categories
+                                </md-sidemenu-button>
+                                
+                            </md-sidemenu-group>
+                        </md-sidemenu>
+                    </md-content>
+                    
+                </md-sidenav>
+                    <md-content class="main-content" md-scroll-y layout="column" flex>
+                </md-content>
+            </div>
+        </div>
+    </div>
+</div>

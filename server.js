@@ -1,5 +1,4 @@
 var express = require('express');
-var router = express.Router();
 var app = express();
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -42,12 +41,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
-app.use("/", express.static(path.join(__dirname, 'web_admin')));
+app.use("/", express.static(path.join(__dirname, 'public')));
 app.use("/api", express.static(path.join(__dirname, 'api')));
 
 /* Use this to refresh page in html5mode(true)  */
-app.get('*', function(req, res, next) {
-    res.sendfile('./web_admin/index.html');
+app.get('*', function(req, res) {
+    res.sendfile('./public/index.html');
 });
 /* .......End........ */
 

@@ -1,9 +1,9 @@
 //************Local Configuration********************************//
 
 	  
-	var imagesUrl = "http://localhost:3001/";
-	var service_url = "http://localhost:3001/";//local
-	var templateUrl = "http://localhost:3001/";//local
+	// var imagesUrl = "http://localhost:3001/";
+	// var service_url = "http://localhost:3001/";//local
+	// var templateUrl = "http://localhost:3001/";//local
 
 	//************End********************************************//
 

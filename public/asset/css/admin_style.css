@@ -12,7 +12,7 @@ select, button{outline:none!important;}
 select, button:focus{outline:none!important;}
 textarea, input{outline:none!important;}
 textarea{resize:none;}
-select { appearance: none; -moz-appearance: none; -webkit-appearance: none; cursor:pointer; } 
+select { appearance: none; -moz-appearance: none; -webkit-appearance: none; cursor:pointer; margin-left: 28px; } 
 
 /*Login Page css added here*/
 

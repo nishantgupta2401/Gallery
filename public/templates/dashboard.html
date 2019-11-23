@@ -30,16 +30,27 @@
                 <h1>Gallery</h1>
             </div>
         </section>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="inn_relat form-group">
+                    <select class="mdb-select md-form form-control" ng-model="category" name="category" ng-change="getStickerByCategory(category)">
+                        <option disabled value="">Select Category Name</option>
+                        <option value="All">All</option>
+                        <option ng-value="cat" ng-repeat="cat in categories" >{{cat}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>    
         
         <div class="container_margin">
             <section class="Search-panel">
                 <div class="container">
                     <main class="cards">
-                        <img src="{{data.image}}" alt="Stickers" ng-repeat="data in stickers">
+                        <img src="./api/uploads/{{data}}" alt="Stickers" ng-repeat="data in stickers">
                     </main>
                 </div>
             </section>
-            
         </div>
     </div>
 </section>

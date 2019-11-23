@@ -1,4 +1,5 @@
 var express = require('express');
+var router = express.Router();
 var app = express();
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -20,13 +21,12 @@ app.set('port', (process.env.PORT || env.port));
 
 var storage = multer.diskStorage({ // storage code for storing setting
     destination: function(req, file, cb) {
-        cb(null, base_urls + 'uploads/')
+        cb(null, base_urls + 'uploads/');
     },
     filename: function(req, file, cb) {
-        cb(null, "product-" + Date.now() + '.' + file.originalname.split('.').pop())
+        cb(null, req.body.category_name+"-" + Date.now() + '.' + file.originalname.split('.').pop());
     }
 });
-
 
 var upload = multer({ storage: storage });
 
@@ -46,13 +46,16 @@ app.use("/", express.static(path.join(__dirname, 'web_admin')));
 app.use("/api", express.static(path.join(__dirname, 'api')));
 
 /* Use this to refresh page in html5mode(true)  */
-app.get('*', function(req, res) {
+app.get('*', function(req, res, next) {
     res.sendfile('./web_admin/index.html');
 });
 /* .......End........ */
 
 
 app.post('/login', userlogin.login);
+app.post('/uploadSticker', upload.any() ,userlogin.uploadSticker);
+app.post('/getStickers', userlogin.getStickers);
+
 
 server.listen(app.get('port'), function() {
     var host = server.address().address;

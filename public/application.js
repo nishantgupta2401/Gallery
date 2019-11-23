@@ -1,5 +1,5 @@
 'use strict';
-angular.module('test', ['ui.router', 'ngCookies','ngMessages', 'angular-storage', 'ngMaterial', 'ngMaterialSidemenu', 'ngAnimate'])
+angular.module('test', ['ui.router', 'ngCookies','ngMessages', 'angular-storage', 'ngMaterial', 'ngMaterialSidemenu', 'ngAnimate','ngDroplet'])
     .config(['$urlRouterProvider','$locationProvider', '$stateProvider', 'storeProvider','$httpProvider', function($urlRouterProvider,$locationProvider, $stateProvider, storeProvider, $httpProvider) {
         $urlRouterProvider.otherwise('/signin');
         $stateProvider
